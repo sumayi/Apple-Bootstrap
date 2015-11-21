@@ -220,34 +220,37 @@
 	</div>
 
 	<script type="text/javascript">
-	$(function(){
-
+		$(function(){
 		if (window.screen.width<=768||document.body.clientWidth<=768) {
-					$(".bot").hide();			
-			};
+			$(".bot").hide();
+			$(".sp1").click(function(){
+				$(".bot1").slideToggle(800);
+			})		
+			$(".sp0").click(function(){
+				$(".bot0").slideToggle(800);
+			})
+			$(".sp2").click(function(){
+				$(".bot2").slideToggle(800);
+			})			
+		};
 		$('.carousel').carousel({
 		interval: 1500
 		});
-	
-		$(".sp1").click(function(){
-			$(".bot1").slideToggle(800);
-		})
-		
-		$(".sp0").click(function(){
-			$(".bot0").slideToggle(800);
-		})
-		$(".sp2").click(function(){
-			$(".bot2").slideToggle(800);
-		})
-		
 		$(window).resize(function(){
 			if (window.screen.width<=768||document.body.clientWidth<=768) {
-					$(".bot").hide();		
+				$(".bot").hide();
+				$(".sp1").click(function(){
+					$(".bot1").slideToggle(800);
+				})	
+				$(".sp0").click(function(){
+					$(".bot0").slideToggle(800);
+				})
+				$(".sp2").click(function(){
+					$(".bot2").slideToggle(800);
+				})		
 			}else{
 				$(".bot").show();
 			}
-
-  		
 		});
 });
 </script></body>
